@@ -289,6 +289,14 @@ in
   hashtbl_flistize<key,itm><ki2> (tbl)
 end // end of [hashtbl_listize]
 
+implement
+{key,itm}
+hashtbl_free
+   (tbl) = () where {
+   vtypedef pair = @(key,itm)
+   implement list_vt_freelin$clear<pair>(i) = hashtbl_free$clear<key,itm>(i.0, i.1)
+   val () = list_vt_freelin<pair>(hashtbl_listize<key,itm>(tbl))
+}
 (* ****** ****** *)
 //
 implement

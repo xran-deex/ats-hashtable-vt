@@ -1,5 +1,8 @@
 #include "../hashtbl-vt-keys.hats"
 
+staload $HT
+staload $LM
+
 implement main(argc, argv) = 0 where {
     val ht = hashtbl_make_nil<strptr,List_vt(strptr)>(i2sz 10)
 
@@ -21,14 +24,18 @@ implement main(argc, argv) = 0 where {
     val () = println!("key: ", name2, ", value: ", v2)
     val () = free(name)
     val () = free(name2)
+    vtypedef pair = (strptr,List_vt(strptr))
+    implement gclear_ref<pair>(i) = () where {
+        val () = strptr_free(i.0)
+        val () = list_vt_freelin(i.1)
+    }
     implement gclear_ref<strptr>(i) = free(i)
     val () = list_vt_freelin(v)
     val () = list_vt_freelin(v2)
 
-    vtypedef pair = (strptr,List_vt(strptr))
-    implement list_vt_freelin$clear<pair>(i) = () where {
-        val () = strptr_free(i.0)
-        val () = list_vt_freelin(i.1)
+    implement hashtbl_free$clear<strptr,List_vt(strptr)>(k,i) = () where {
+        val () = strptr_free(k)
+        val () = list_vt_freelin(i)
     }
-    val () = list_vt_freelin<pair>($UNSAFE.castvwtp0{List_vt(pair)}(hashtbl_listize(ht)))
+    val () = hashtbl_free(ht)
 }

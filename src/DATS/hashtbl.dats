@@ -2,6 +2,9 @@
 #define ATS_DYNLOADFLAG 0
 staload "libats/SATS/hashfun.sats"
 
+staload $HT
+staload $LM
+
 implement
 equal_key_key<strptr>(k1,k2) = $UNSAFE.castvwtp1{string}(k1) = $UNSAFE.castvwtp1{string}(k2)
 implement

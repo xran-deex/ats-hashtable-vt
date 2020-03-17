@@ -264,6 +264,18 @@ hashtbl_listize1
   (tbl: !hashtbl(key, INV(itm))):<!wrt> List0_vt @(key, itm)
 // end of [hashtbl_listize1]
 
+fun
+{key:vt0p
+;itm:vt0p} 
+hashtbl_free$clear
+  (k: &key >> key?, i: &itm >> itm?):<!wrt> void
+
+fun
+{key:vt0p
+;itm:vt0p} 
+hashtbl_free
+  (tbl: hashtbl(key, INV(itm))):<!wrt> void
+
 (* ****** ****** *)
 //
 fun
