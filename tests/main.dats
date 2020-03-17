@@ -1,4 +1,4 @@
-#include "../hashtbl-vt-keys.hats"
+#include "../hashtable-vt.hats"
 
 staload $HT
 staload $LM

@@ -27,4 +27,4 @@ ATS_COMPILE (TEST_SRC
 	src/SATS/hashtbl.sats
 	src/DATS/hashtbl.dats
 	)
-ADD_LIBRARY (hashtbl_vt_keys ${TEST_SRC})
+ADD_LIBRARY (hashtbl-vt ${TEST_SRC})
