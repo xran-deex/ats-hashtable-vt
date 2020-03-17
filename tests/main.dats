@@ -1,8 +1,4 @@
-#include "../src/HATS/includes.hats"
-staload _ = "../src/DATS/hashtbl_chain.dats"
-staload _ = "libats/DATS/hashfun.dats"
-staload _ = "../src/DATS/linmap_list.dats"
-staload _ = "../src/DATS/hashtbl.dats"
+#include "../hashtbl-vt-keys.hats"
 
 implement main(argc, argv) = 0 where {
     val ht = hashtbl_make_nil<strptr,List_vt(strptr)>(i2sz 10)
