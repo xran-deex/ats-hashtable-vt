@@ -228,12 +228,6 @@ hashtbl_foreach_cloref
 ) : void // end-of-function
 //
 (* ****** ****** *)
-
-fun
-{key:vt0p
-;itm:t0p}
-hashtbl_free (tbl: hashtbl(key, INV(itm))): void
-
 (* ****** ****** *)
 //
 fun

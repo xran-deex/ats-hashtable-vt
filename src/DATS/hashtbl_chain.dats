@@ -131,7 +131,7 @@ LM = "./../SATS/linmap_list.sats"
 
 implement
 {key}(*tmp*)
-$LM.equal_key_key (x, y) = false//equal_key_key<key> (x, y)
+$LM.equal_key_key (x, y) = equal_key_key<key> (x, y)
 
 (* ****** ****** *)
 

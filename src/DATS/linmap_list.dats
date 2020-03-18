@@ -49,6 +49,8 @@ staload "./../SATS/linmap_list.sats"
 
 #include "./SHARE/linmap.hats" // code reuse
 #include "./SHARE/linmap_node.hats" // code reuse
+#include "./../HATS/includes.hats"
+#include "./../HATS/hashtbl.hats"
 
 (* ****** ****** *)
 
