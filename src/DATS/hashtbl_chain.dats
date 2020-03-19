@@ -46,6 +46,8 @@ UN = "prelude/SATS/unsafe.sats"
 
 staload "libats/SATS/hashfun.sats"
 
+#include "linmap-list-vt/linmap_list.hats"
+
 (* ****** ****** *)
 
 staload "./../SATS/hashtbl_chain.sats"
@@ -124,8 +126,8 @@ chain_flistize (kxs: chain(key, itm)): List_vt (ki2)
 
 (* ****** ****** *)
 
-staload
-LM = "./../SATS/linmap_list.sats"
+// staload
+// LM = "./../SATS/linmap_list.sats"
 
 (* ****** ****** *)
 

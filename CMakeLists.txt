@@ -8,7 +8,7 @@ IF(NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/node_modules)
 	)
 ENDIF()
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/node_modules)
-    #add_subdirectory(node_modules/<somelib>)
+    add_subdirectory(node_modules/linmap-list-vt)
 ENDIF()
 FIND_PACKAGE (ATS REQUIRED)
 IF (NOT ATS_FOUND)
@@ -18,11 +18,9 @@ ATS_INCLUDE (src/SATS src/DATS src/HATS)
 IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/node_modules)
     ATS_INCLUDE(node_modules)
 ENDIF()
-set(CMAKE_C_FLAGS "-DATS_MEMALLOC_LIBC -D_DEFAULT_SOURCE -g")# -latslib")
+set(CMAKE_C_FLAGS "-DATS_MEMALLOC_LIBC -D_DEFAULT_SOURCE -g")
 ATS_COMPILE (TEST_SRC
-	src/SATS/linmap_list.sats
-	src/DATS/linmap_list.dats
 	src/SATS/hashtbl_chain.sats
 	src/DATS/hashtbl_chain.dats
 	)
-ADD_LIBRARY (hashtable-vt ${TEST_SRC})
+ADD_LIBRARY (hashtable-vt SHARED ${TEST_SRC})

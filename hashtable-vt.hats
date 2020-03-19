@@ -1,4 +1,5 @@
-#include "./src/HATS/includes.hats"
+#include "linmap-list-vt/linmap_list.hats"
+staload HT = "./src/SATS/hashtbl_chain.sats"
 staload _ = "./src/DATS/hashtbl_chain.dats"
 staload _ = "libats/DATS/hashfun.dats"
-staload _ = "./src/DATS/linmap_list.dats"
+staload _ = "./src/DATS/hashtbl.dats"
