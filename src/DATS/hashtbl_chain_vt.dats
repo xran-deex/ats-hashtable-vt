@@ -33,7 +33,7 @@
 
 (* ****** ****** *)
 
-#define ATS_PACKNAME "ATSLIB.libats.hashtbl_chain"
+#define ATS_PACKNAME "hashtbl_chain_vt"
 #define ATS_DYNLOADFLAG 0 // no need for dynloading at run-time
 #define ATS_EXTERN_PREFIX "atslib_" // prefix for external names
 
@@ -46,15 +46,15 @@ UN = "prelude/SATS/unsafe.sats"
 
 staload "libats/SATS/hashfun.sats"
 
-#include "linmap-list-vt/linmap_list.hats"
+#include "linmap-list-vt/linmap_list_vt.hats"
 
 (* ****** ****** *)
 
-staload "./../SATS/hashtbl_chain.sats"
+staload "./../SATS/hashtbl_chain_vt.sats"
 
 (* ****** ****** *)
 
-#include "./SHARE/hashtbl.hats" // code reuse
+#include "./SHARE/hashtbl_vt.hats" // code reuse
 
 (* ****** ****** *)
 

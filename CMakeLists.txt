@@ -20,7 +20,7 @@ IF(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/node_modules)
 ENDIF()
 set(CMAKE_C_FLAGS "-DATS_MEMALLOC_LIBC -D_DEFAULT_SOURCE -g")
 ATS_COMPILE (TEST_SRC
-	src/SATS/hashtbl_chain.sats
-	src/DATS/hashtbl_chain.dats
+	src/SATS/hashtbl_chain_vt.sats
+	src/DATS/hashtbl_chain_vt.dats
 	)
 ADD_LIBRARY (hashtable-vt SHARED ${TEST_SRC})

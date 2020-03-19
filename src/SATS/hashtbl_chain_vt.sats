@@ -47,11 +47,11 @@
 //
 #define
 ATS_PACKNAME
-"ATSLIB.libats.hashtbl_chain"
+"hashtbl_chain_vt"
 //
 (* ****** ****** *)
 
-#include "./SHARE/hashtbl.hats"
+#include "./SHARE/hashtbl_vt.hats"
 
 (* ****** ****** *)
 
