@@ -9,6 +9,6 @@
   "author": "Randy Valis",
   "license": "ISC",
   "dependencies": {
-    "linmap-list-vt": "git+http://ubuntu-netfu:3000/randy.valis/ats-linmap-list-vt"
+    "linmap-list-vt": "git+https://github.com/xran-deex/ats-linmap-list-vt#v0.1.0"
   }
 }
