@@ -1,6 +1,6 @@
 #include "share/atspre_define.hats"
 #include "share/atspre_staload.hats"
-#include "../hashtable_vt.hats"
+#include "hashtable_vt.hats"
 
 staload $HT
 

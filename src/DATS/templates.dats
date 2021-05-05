@@ -1,7 +1,6 @@
 #include "./../HATS/includes.hats"
 staload "libats/SATS/hashfun.sats"
-
-staload $HT
+staload "./../SATS/hashtbl_chain_vt.sats"
 
 implement
 equal_key_key<strptr>(k1,k2) = $UNSAFE.castvwtp1{string}(k1) = $UNSAFE.castvwtp1{string}(k2)

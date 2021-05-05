@@ -1,3 +1,2 @@
 #include "share/atspre_define.hats"
 #include "share/atspre_staload.hats"
-staload HT = "./../SATS/hashtbl_chain_vt.sats"

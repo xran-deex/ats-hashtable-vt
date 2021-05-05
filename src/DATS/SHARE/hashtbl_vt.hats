@@ -30,6 +30,8 @@
 (* Author: Hongwei Xi *)
 (* Authoremail: hwxi AT cs DOT bu DOT edu *)
 (* Start time: August, 2013 *)
+staload "libats/SATS/hashfun.sats"
+staload UNSAFE = "prelude/SATS/unsafe.sats"
 
 (* ****** ****** *)
 //
@@ -43,6 +45,9 @@
 implement
 hash_key<string> (str) =
   string_hash_multiplier (31UL, 618033989UL, str)
+implement
+hash_key<strptr> (str) =
+  string_hash_multiplier (31UL, 618033989UL, $UNSAFE.castvwtp1{string}(str))
 (*
 implement
 hash_key<string> (str) =

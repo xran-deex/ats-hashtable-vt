@@ -46,7 +46,7 @@ UN = "prelude/SATS/unsafe.sats"
 
 staload "libats/SATS/hashfun.sats"
 
-#include "linmap-list-vt/linmap_list_vt.hats"
+#include "linmap_list_vt.hats"
 
 (* ****** ****** *)
 
