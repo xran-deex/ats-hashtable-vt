@@ -4,8 +4,7 @@ name: default
 steps:
 - name: build
   image: xrandeex/ats2:0.4.2
-  environment:
-      CONAN_REMOTE: https://pkg.us.to 
   commands:
+    - conan remote add pkg https://pkg.us.to
     - conan install . -if build
     - conan build . -if build
