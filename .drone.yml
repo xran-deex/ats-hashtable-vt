@@ -1,0 +1,11 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: xrandeex/ats2:0.4.2
+  environment:
+      CONAN_REMOTE: https://pkg.us.to 
+  commands:
+    - conan install . -if build
+    - conan build . -if build
