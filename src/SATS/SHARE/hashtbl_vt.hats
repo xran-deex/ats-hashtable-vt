@@ -101,7 +101,7 @@ key:vt0p;itm:t0p
 fun{
 key:vt0p;itm:vt0p
 } hashtbl_search_ref
-  (tbl: !hashtbl(key, INV(itm)), key: !key): cPtr0 (itm)
+  (tbl: !hashtbl(key, INV(itm)), key: !key): P2tr0 (itm)
 // end of [hashtbl_search_ref]
 
 fun{

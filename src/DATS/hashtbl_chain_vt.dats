@@ -68,7 +68,7 @@ extern
 fun{
 key:vt0p;itm:vt0p
 } chain_search_ref
-  (kxs: !chain(key, itm), k0: !key): cPtr0(itm)
+  (kxs: !chain(key, itm), k0: !key): P2tr0(itm)
 // end of [chain_search_ref]
 
 (* ****** ****** *)

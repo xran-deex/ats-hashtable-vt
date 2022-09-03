@@ -72,12 +72,12 @@ val p =
 in
 //
 if
-(cptr2ptr(p) > 0)
+(p2tr2ptr(p) > 0)
 then let
 //
   val
   (pf, fpf | p) =
-  $UN.cptr_vtake(p)
+  $UN.p2tr_vtake(p)
 //
   val () = res := !p
   prval () = fpf (pf)
@@ -202,7 +202,7 @@ hashtbl_exchange
 val p_x1 =
   hashtbl_search_ref<key,itm>(tbl, k0)
 //
-val p_x1 = cptr2ptr(p_x1)
+val p_x1 = p2tr2ptr(p_x1)
 //
 in
 //
